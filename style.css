@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner&family=Work+Sans:ital,wght@1,200&display=swap');
+:root{
+    --textColor:black;
+    --backgroundColor:whitesmoke;
+    --item:#fefeff;
+}
+.dark-mode{
+    --item:#434343;
+    --textColor:rgb(255, 253, 253);
+    --backgroundColor:rgba(0,0,0,0.9);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: radial-gradient(#000000, #166D3B);
+    transition: all 1s;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+.container{
+    width: 85%;
+    height: 95vh;
+    background: var(--backgroundColor);
+    text-align: center;
+    box-shadow: 0px 0px 5px 3px rgb(36, 36, 36);
+    margin: 2.5vh auto;
+    overflow: scroll;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+.head{
+ margin: 2px auto 10px;
+}
+.head h1{
+    padding: 10px 0px 5px;
+    color: orange;
+    font-family: 'Edu QLD Beginner', cursive;
+}
+.inputField{
+    margin: 5px 0px 0px;
+}
+.inputField input{
+    font-size: 20px;
+    background: var(--backgroundColor);
+    border: none;
+    outline: none;
+    color: var(--textColor);
+    border-bottom: 2px solid var(--textColor);
+    width: 50%;
+    transition: 0.5s all ease-in-out;
+}
+.inputField input:focus{
+    width: 60%;
+    border-bottom: 2px solid #7abeef;
+}
+#items{
+    margin: 40px auto auto;
+    max-width: 90%;
+    overflow-y: scroll;
+}
+.item{
+    position: relative;
+    margin: 15px 0px 5px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16);
+    background: var(--item);
+}
+#items .item h2{
+    color: var(--textColor);
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Work Sans', sans-serif;
+}
+#items .item .del{
+    position: absolute;
+    right: 0;
+    margin-right: 1px;
+    width: 25px;
+    height: 90%;
+    cursor: pointer;
+    color: var(--textColor);
+    border: none;
+    background: transparent;
+    opacity: 1;
+    transition: all 1s ease-in;
+}
+#items .item .del:hover{
+    background: red;
+}
+#dark-theme{
+    position: absolute;
+    top: 3%;
+    right: 2%;
+    width: 40px;
+    height: 40px;
+    margin: 1px;
+}
+#dark-theme::before{
+    position: absolute;
+    right: 0;
+    top: 3%;
+}
+#pencilIcon{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+#pencilIcon::before{
+    color: orange;
+}
+.white{
+    color: white;
+}
+@media screen and (max-width:450px){
+    .head h1{
+        font-size: 25px;
+    }
+    #pencilIcon::before{
+        font-size: 18px;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        margin: 0%;
+    }
+}
